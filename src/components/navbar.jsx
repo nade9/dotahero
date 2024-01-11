@@ -1,8 +1,8 @@
 import Logo from '../assets/dotahero_transparent.png';
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import heroes from 'dotaconstants/build/heroes.json';
-
-const cdn = 'https://cdn.cloudflare.steamstatic.com';
+import HeroLink from './hero_link.jsx';
+import cdn from '../cdn.js';
 
 export default function NavigationBar() {
     return (
@@ -13,13 +13,10 @@ export default function NavigationBar() {
 
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
-                    <NavDropdown title="HEROES" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#">
-                            <img className="me-2"
-                                 src={cdn + heroes['106']['icon']}
-                                 alt="Ember Spirit icon"/>
-                            {heroes['106']['localized_name']}
-                        </NavDropdown.Item>
+                    <NavDropdown className={"fw-semibold"} title="HEROES" id="basic-nav-dropdown">
+                        {Object.entries(heroes).map((hero) => (
+                            <HeroLink key={hero['1']['id']} {...hero}/>
+                        ))}
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>
