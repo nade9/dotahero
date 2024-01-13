@@ -1,4 +1,4 @@
-import NavigationBar from './components/navbar.jsx';
+import NavigationBar from './components/Navbar/NavigationBar.jsx';
 import {Container} from 'react-bootstrap';
 
 export default function App() {

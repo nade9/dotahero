@@ -1,5 +1,5 @@
 import {NavDropdown} from 'react-bootstrap';
-import cdn from '../cdn.js';
+import cdn from '../../../cdn.js';
 
 export default function HeroLink(id) {
     return (
