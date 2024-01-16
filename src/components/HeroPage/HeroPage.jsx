@@ -19,12 +19,16 @@ export default function HeroPage() {
                     <Col>
                         <h2 className="fw-bold">{hero.localized_name}</h2>
                         <div className="bg-success text-center rounded-5 fw-semibold mb-2">{hero.base_health +
-                            hero.base_str * 22} <span
-                            className="text-muted">+{(Math.floor((hero.base_health_regen + hero.base_str * 0.1) * 10) / 10).toFixed(1)}</span>
+                            hero.base_str * 22}
+                            <span className="text-muted">
+                                +{(Math.floor((hero.base_health_regen + hero.base_str * 0.1) * 10) / 10).toFixed(1)}
+                            </span>
                         </div>
                         <div className="bg-primary text-center rounded-5 fw-semibold mb-2">{hero.base_mana +
-                            hero.base_int * 12} <span
-                            className="text-muted">+{(Math.floor((hero.base_mana_regen + hero.base_int * 0.05) * 10) / 10).toFixed(1)}</span>
+                            hero.base_int * 12}
+                            <span className="text-muted">
+                                +{(Math.floor((hero.base_mana_regen + hero.base_int * 0.05) * 10) / 10).toFixed(1)}
+                            </span>
                         </div>
                     </Col>
                 </Row>

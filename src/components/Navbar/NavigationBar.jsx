@@ -4,7 +4,7 @@ import HeroList from './HeroList/HeroList.jsx';
 
 export default function NavigationBar() {
     return (
-        <Navbar className={'bg-dark-subtle p-0 rounded-5 my-3 px-3'}>
+        <Navbar className={'bg-dark-subtle rounded-5 my-3 px-3'}>
             <Navbar.Brand href={'#'} className={'fw-bold me-0'}>
                 <img className={'w-75'} src={Logo} alt="DOTAHERO Logo"/>
             </Navbar.Brand>

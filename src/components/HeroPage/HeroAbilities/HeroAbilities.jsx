@@ -1,5 +1,4 @@
-import {Col, Row} from 'react-bootstrap';
-import cdn from '../../../assets/cdn.js';
+import {Col} from 'react-bootstrap';
 import hero_abilities from 'dotaconstants/build/hero_abilities.json';
 import heroes from 'dotaconstants/build/heroes.json';
 import HeroAbility from './HeroAbility.jsx';
