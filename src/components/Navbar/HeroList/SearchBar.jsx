@@ -1,6 +1,6 @@
 import {Form} from 'react-bootstrap';
 
-function Search() {
+function handleChange() {
     const input = document.getElementById('search');
     const hero_list = document.getElementById('hero-list');
     const hero = hero_list.children;
@@ -20,7 +20,7 @@ export default function SearchBar() {
             id="search"
             className="mx-3 my-2 w-auto sticky-top"
             placeholder="Search a hero..."
-            onChange={Search}
+            onChange={handleChange}
         />
     );
 }
