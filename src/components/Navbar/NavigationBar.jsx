@@ -1,7 +1,6 @@
-import Logo from '../../assets/dotahero_transparent.png';
-import {Dropdown, DropdownMenu, Nav, Navbar, NavDropdown, NavLink} from 'react-bootstrap';
+import Logo from '/dotahero_transparent.png';
+import {Nav, Navbar} from 'react-bootstrap';
 import HeroList from './HeroList/HeroList.jsx';
-import cdn from '../../cdn.js';
 
 export default function NavigationBar() {
     return (
@@ -12,7 +11,7 @@ export default function NavigationBar() {
 
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
-                    <HeroList />
+                    <HeroList/>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

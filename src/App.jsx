@@ -1,11 +1,14 @@
-import NavigationBar from './components/Navbar/NavigationBar.jsx';
-import {Container} from 'react-bootstrap';
+import Page from './Page.jsx';
+import {Context} from './context.jsx';
+import {useState} from 'react';
 
 export default function App() {
+    const [selected, setSelected] = useState('1');
+    console.log(selected);
+
     return (
-        <Container fluid="md">
-            <NavigationBar/>
-            <h1>Hello World!</h1>
-        </Container>
+        <Context.Provider value={{selected, setSelected}}>
+            <Page />
+        </Context.Provider>
     );
 }

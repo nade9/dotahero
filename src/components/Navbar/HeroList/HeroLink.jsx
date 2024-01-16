@@ -1,13 +1,21 @@
 import {NavDropdown} from 'react-bootstrap';
-import cdn from '../../../cdn.js';
+import cdn from '../../../assets/cdn.js';
+import {Context} from '../../../context.jsx';
+import {useContext} from 'react';
 
-export default function HeroLink(id) {
+export default function HeroLink(hero) {
+    const context = useContext(Context);
+
+    function handleClick(id) {
+        context.setSelected(id);
+    }
+
     return (
-        <NavDropdown.Item>
+        <NavDropdown.Item className={'bg-dark'} onClick={() => handleClick(hero.id)}>
             <img className="me-2"
-                 src={cdn + id['1']['icon']}
-                 alt={id['1']['localized_name'] + ' icon'}/>
-            {id['1']['localized_name']}
+                 src={cdn + hero.icon}
+                 alt={hero.localized_name + ' icon'}/>
+            {hero.localized_name}
         </NavDropdown.Item>
     );
 }

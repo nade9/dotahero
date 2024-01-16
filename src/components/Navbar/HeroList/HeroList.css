@@ -1,0 +1,9 @@
+.scrollable-menu {
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.scrollable-menu::-webkit-scrollbar {
+    display: none;
+}

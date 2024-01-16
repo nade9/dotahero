@@ -18,7 +18,7 @@ export default function SearchBar() {
         <Form.Control
             autoFocus
             id="search"
-            className="mx-3 my-2 w-auto"
+            className="mx-3 my-2 w-auto sticky-top"
             placeholder="Search a hero..."
             onChange={Search}
         />
